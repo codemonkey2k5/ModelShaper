@@ -16,3 +16,7 @@ releases/
 *.pdb
 docs/screenshots/*.png
 docs/screenshots/full-res/
+
+**/__pycache__/
+*.pyc
+
