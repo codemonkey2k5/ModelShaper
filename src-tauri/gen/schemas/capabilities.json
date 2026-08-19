@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Main window permissions for ModelShaper","local":true,"windows":["main"],"permissions":["core:default","core:window:allow-set-skip-taskbar","opener:default","opener:allow-open-path","opener:allow-open-url","opener:allow-reveal-item-in-dir","dialog:default","allow-all-app"]}}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModelShaper</title>
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/app.css" />
+    <style>
+      /* Inline so it paints before any script loads (no blank white flash). */
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f4f5f7;
+        z-index: 99999;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: #1a1f2a;
+      }
+      #boot.hidden {
+        display: none;
+      }
+      #boot .boot-inner {
+        text-align: center;
+        padding: 2rem;
+      }
+      #boot .boot-mark {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 1rem;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #2c5f8a 0%, #1e3f5c 100%);
+      }
+      #boot .boot-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin: 0 0 0.35rem;
+      }
+      #boot .boot-sub {
+        margin: 0 0 1.25rem;
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+      #boot .boot-spinner {
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+        border: 3px solid #d5d9e0;
+        border-top-color: #2c5f8a;
+        border-radius: 50%;
+        animation: boot-spin 0.75s linear infinite;
+      }
+      @keyframes boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot .boot-spinner {
+          animation: none;
+          border-top-color: #d5d9e0;
+          border-right-color: #2c5f8a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot" role="status" aria-live="polite" aria-busy="true">
+      <div class="boot-inner">
+        <div class="boot-mark" aria-hidden="true"></div>
+        <p class="boot-title">ModelShaper</p>
+        <p class="boot-sub">Starting... please wait</p>
+        <div class="boot-spinner" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div id="app" hidden></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

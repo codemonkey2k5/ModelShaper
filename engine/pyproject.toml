@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelcraft-engine"
+version = "0.1.0"
+description = "ModelShaper training worker — adaptive local LLM adaptation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+train = [
+  # Installed by the zero-touch setup on end-user machines:
+  # torch (CUDA wheel), unsloth, trl, peft, transformers, datasets,
+  # pypdf, python-docx, accelerate, bitsandbytes
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+modelcraft-worker = "modelcraft_engine.worker:main"
+
+[tool.setuptools.packages.find]
+include = ["modelcraft_engine*"]

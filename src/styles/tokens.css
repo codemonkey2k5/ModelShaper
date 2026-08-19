@@ -1,0 +1,123 @@
+:root {
+  /* Surfaces */
+  --mc-bg: #f4f5f7;
+  --mc-bg-elevated: #ffffff;
+  --mc-bg-subtle: #eef0f3;
+  --mc-bg-inset: #e6e9ee;
+  --mc-border: #d5d9e0;
+  --mc-border-strong: #b8bfc9;
+
+  /* Text */
+  --mc-text: #1a1f2a;
+  --mc-text-secondary: #4a5568;
+  --mc-text-muted: #6b7280;
+  --mc-text-inverse: #ffffff;
+
+  /* Accent — restrained steel blue, not purple AI gradient */
+  --mc-accent: #2c5f8a;
+  --mc-accent-hover: #244f73;
+  --mc-accent-muted: #e8f0f7;
+  --mc-accent-border: #9bb8d1;
+
+  /* Status */
+  --mc-ok: #1f7a4c;
+  --mc-ok-bg: #e8f6ee;
+  --mc-warn: #9a6700;
+  --mc-warn-bg: #fff6e0;
+  --mc-danger: #b42318;
+  --mc-danger-bg: #fdecea;
+  --mc-info: #2c5f8a;
+  --mc-info-bg: #eef1f5;
+
+  /* Meter fills */
+  --mc-meter-track: #e2e6ec;
+  --mc-meter-fill: #3d7aab;
+  --mc-meter-warn: #c9850a;
+  --mc-meter-crit: #c0392b;
+
+  /* Typography */
+  --mc-font: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mc-font-mono: "Cascadia Mono", "Consolas", ui-monospace, monospace;
+  --mc-fs-xs: 0.75rem;
+  --mc-fs-sm: 0.8125rem;
+  --mc-fs-md: 0.9375rem;
+  --mc-fs-lg: 1.0625rem;
+  --mc-fs-xl: 1.25rem;
+  --mc-fs-2xl: 1.5rem;
+  --mc-fw-regular: 400;
+  --mc-fw-medium: 550;
+  --mc-fw-semibold: 600;
+  --mc-lh: 1.45;
+
+  /* Spacing scale (4px base) */
+  --mc-space-1: 0.25rem;
+  --mc-space-2: 0.5rem;
+  --mc-space-3: 0.75rem;
+  --mc-space-4: 1rem;
+  --mc-space-5: 1.25rem;
+  --mc-space-6: 1.5rem;
+  --mc-space-8: 2rem;
+  --mc-space-10: 2.5rem;
+  --mc-space-12: 3rem;
+
+  /* Radii & elevation */
+  --mc-radius-sm: 6px;
+  --mc-radius-md: 10px;
+  --mc-radius-lg: 14px;
+  --mc-shadow-sm: 0 1px 2px rgba(26, 31, 42, 0.06);
+  --mc-shadow-md: 0 4px 16px rgba(26, 31, 42, 0.08);
+  --mc-shadow-lg: 0 12px 40px rgba(26, 31, 42, 0.12);
+
+  /* Layout */
+  --mc-sidebar-width: 280px;
+  --mc-header-height: 56px;
+  --mc-content-max: 860px;
+
+  /* Motion */
+  --mc-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --mc-duration: 160ms;
+}
+
+/* Dark theme - higher contrast, readable muted text, calmer accents */
+html[data-theme="dark"] {
+  --mc-bg: #0f1419;
+  --mc-bg-elevated: #1c2430;
+  --mc-bg-subtle: #243041;
+  --mc-bg-inset: #0a0e13;
+  --mc-border: #3a4656;
+  --mc-border-strong: #5a6a7e;
+
+  --mc-text: #f0f3f7;
+  --mc-text-secondary: #c5cdd8;
+  --mc-text-muted: #9aa8b8;
+  --mc-text-inverse: #0f1419;
+
+  --mc-accent: #6cb0e0;
+  --mc-accent-hover: #8bc4eb;
+  --mc-accent-muted: #1e3348;
+  --mc-accent-border: #4a7fa8;
+
+  --mc-ok: #5dca8e;
+  --mc-ok-bg: #163024;
+  --mc-warn: #e8b84a;
+  --mc-warn-bg: #33280f;
+  --mc-danger: #ef7a72;
+  --mc-danger-bg: #331816;
+  --mc-info: #8eb4d4;
+  --mc-info-bg: #1e2834;
+
+  --mc-meter-track: #2c3645;
+  --mc-meter-fill: #6cb0e0;
+  --mc-meter-warn: #e8b84a;
+  --mc-meter-crit: #ef7a72;
+
+  --mc-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45);
+  --mc-shadow-md: 0 4px 18px rgba(0, 0, 0, 0.5);
+  --mc-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --mc-duration: 0ms;
+  }
+}

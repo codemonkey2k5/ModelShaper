@@ -1,0 +1,36 @@
+[[permission]]
+identifier = "allow-all-app"
+description = "Allows all ModelShaper application IPC commands"
+commands.allow = [
+  "get_hardware_snapshot",
+  "get_engine_status",
+  "get_setup_plan",
+  "discover_runtimes",
+  "start_engine_setup",
+  "cancel_engine_setup",
+  "mark_setup_idle",
+  "scan_model",
+  "plan_training",
+  "start_training",
+  "pause_training",
+  "resume_training",
+  "cancel_training",
+  "download_hf_model",
+  "cancel_download",
+  "can_download",
+  "list_downloaded_models",
+  "delete_downloaded_model",
+  "list_material_presets",
+  "save_material_preset",
+  "delete_material_preset",
+  "open_folder",
+  "get_app_settings",
+  "save_app_settings",
+  "get_default_paths",
+  "set_tray_tooltip",
+  "show_main_window",
+  "get_app_version",
+  "peek_start_view",
+  "fetch_url_text",
+  "check_for_update"
+]
